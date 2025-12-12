@@ -2,7 +2,7 @@
 
 ## Introduction :- 
 
-This Python script is designed to scrape data from a website containing books in the "Mystery" category and create a DataFrame for further manipulation and preprocessing. It utilizes the requests, BeautifulSoup, and pandas libraries for web scraping and data manipulation.
+* This Python script is designed to scrape data from a website containing books in the "Mystery" category and create a DataFrame for further manipulation and preprocessing. It utilizes the requests, BeautifulSoup, and pandas libraries for web scraping and data manipulation.
 
 ## Project:- 
 
@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
- a function for scraping content from url
+ * a function for scraping content from url
 def scrape_url(url):
   response = requests.get(url)
   response = response.content
@@ -22,7 +22,7 @@ url = 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html'
 print(scrape_url(url))
 
 
- extracting data from the content
+ * extracting data from the content
 data1 = []
 for i in range(1,51):
   url = f'https://books.toscrape.com/catalogue/page-{i}.html'
@@ -44,6 +44,6 @@ for i in range(1,51):
 df = pd.DataFrame(data1)
 
 
-Output : -
-The script will produce a DataFrame containing information about the books in the "Mystery" category, including book titles, prices, and star ratings.
+## Output : -
+* The script will produce a DataFrame containing information about the books in the "Mystery" category, including book titles, prices, and star ratings.
 
